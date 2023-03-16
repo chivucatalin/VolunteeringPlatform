@@ -36,13 +36,14 @@ export const FilterEventBar = () => {
     /* hooks used in the advanced filter section ,created here in order to be used in the context provider */
     
     //credeam un obiect cu toate detaliile despre filtrare ce ii vom da dispatch
-    const filterObject = (_name, _address, _fromDate, _toDate,_searchQuery,_eventType) => {
+    const filterObject = (_name, _address, _fromDate, _toDate,_searchQuery,_eventType,_joinedEvent) => {
         const _filterParams = {
             name: _name,
             address: _address,
             fromDate: dateFormat(_fromDate),
             toDate: dateFormat(_toDate),
-            searchQuery: _searchQuery
+            searchQuery: _searchQuery,
+            onlyJoined: _joinedEvent
         }
         if (_eventType!==5) _filterParams.eventType=_eventType;
         return _filterParams;
@@ -129,7 +130,7 @@ export const FilterEventBar = () => {
                             </div>
                         </Modal>
                         <Button onClick={() => {
-                            dispatch(filterChange(filterObject(name.current.value, address.current.value, fromDate, toDate,searchQuery,eventType)))
+                            dispatch(filterChange(filterObject(name.current.value, address.current.value, fromDate, toDate,searchQuery,eventType,joinedEvent)))
                             dispatch(eventPageChange(1))
                         }} >Filter</Button>
                     </Stack>

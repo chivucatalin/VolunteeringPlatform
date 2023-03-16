@@ -9,7 +9,12 @@ const context =  [
     "/weatherforecast",
     "/api",
     "/events",
-    "/users"
+    "/users",
+    "/ChatRoom",
+    "/Message",
+    "/chathub",
+    "/JoinedEvent",
+    "/eventphoto",
 ];
 
 module.exports = function(app) {
@@ -17,7 +22,8 @@ module.exports = function(app) {
     target: target,
     secure: false,
     headers: {
-      Connection: 'Keep-Alive'
+      Connection: 'Keep-Alive',
+      Accept: '*/*',
     }
   });
 

@@ -4,10 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 
 import {
-  Checkbox,
   Grid,
   TextField,
-  FormControlLabel,
   Box,
   Button
 } from '@mui/material';
@@ -31,7 +29,6 @@ const modalStyle = {
 
 
 export const LoginModal = () => {
-  const [checked, setChecked] = React.useState(true);
   const usernameRef = React.useRef('');
   const passwordRef = React.useRef('');
   const navigate= useNavigate();
@@ -42,9 +39,6 @@ export const LoginModal = () => {
   const dispatch = useDispatch();
 
 
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
 
   const handleLogin = async () => {
     dispatch(login(usernameRef.current.value, passwordRef.current.value))
@@ -86,17 +80,6 @@ export const LoginModal = () => {
             <TextField label="Password" type={'password'} inputRef={passwordRef}></TextField>
           </Grid>
           <Grid item xs={12}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={checked}
-                  onChange={handleChange}
-                  label={'Keep me logged in'}
-                  inputProps={{ 'aria-label': 'primary checkbox' }}
-                />
-              }
-              label="Keep me logged in"
-            />
           </Grid>
           <Grid item xs={12}>
             <Button fullWidth onClick={() => {

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Box, Typography, Stack, TextField, MenuItem, IconButton } from '@mui/material';
 import { advancedFilterContext } from './FilterEventBar'
-import Groups2Icon from '@mui/icons-material/Groups2';
 import CheckIcon from '@mui/icons-material/Check';
 import { eventItemsChange, eventPageChange } from '../../store/pagination.js'
 
@@ -58,8 +57,7 @@ const modalStyle = {
 export const AdvancedFilterModal = () => {
     //Hook-urile luate de la FilterBar prin context,ca sa putem sa le folosim intre componente
 
-    const { eventType, setEventType, joinedEvent, setJoinedEvent,
-        associationEvent, setAssociationEvent, searchQuery, setSearchQuery } = React.useContext(advancedFilterContext);
+    const { eventType, setEventType, joinedEvent, setJoinedEvent, searchQuery, setSearchQuery } = React.useContext(advancedFilterContext);
 
     //Ca sa putem folosi globabl state-ul paginarii ce este folosit si la componenta PageChoose
     const dispatch = useDispatch()
@@ -140,14 +138,6 @@ export const AdvancedFilterModal = () => {
                     alignItems="centere"
                     spacing={1}
                 >
-                    <Typography id="association-events" variant="caption">
-                        Show your association events:
-                    </Typography>
-                    <IconButton onClick={() => {
-                        setAssociationEvent(!associationEvent)
-                    }}>
-                        <Groups2Icon color={handleButtonColor(associationEvent)} />
-                    </IconButton>
                     <Typography id="joined-events" variant="caption" >
                         Show joined events:
                     </Typography>
@@ -157,9 +147,6 @@ export const AdvancedFilterModal = () => {
                         <CheckIcon color={handleButtonColor(joinedEvent)} />
                     </IconButton>
                 </Stack>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                </Typography>
             </Stack>
         </Box>
     </div>)

@@ -35,13 +35,16 @@ namespace VolunteeringPlatform.Entities
         [MaxLength(200)]
         public string EventAddress { get; set; } = string.Empty;
 
-        public DateTime EventDate { get; set; }
+        public DateTime? EventDate { get; set; }
 
         public int EventNoOfVolunteers { get; set; }
 
         public double? EventLongitude { get; set; }
 
         public double? EventLatitude { get; set; }
+        public ICollection<JoinedEvent>? JoinedEvents { get; set; }
+
+        public ICollection<EventPhoto>? EventPhotos { get; set; }
 
     }
 }

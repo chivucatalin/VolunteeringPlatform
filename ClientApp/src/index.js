@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { SnackbarProvider } from 'notistack'
 import { Provider } from 'react-redux'
 import { CookiesProvider } from 'react-cookie';
 import store from './store'
@@ -17,9 +18,11 @@ const root = createRoot(rootElement);
 root.render(
   <Provider store={store}>
     <CookiesProvider>
+    <SnackbarProvider>
       <BrowserRouter >
         <App />
       </BrowserRouter>
+    </SnackbarProvider>
     </CookiesProvider>
   </Provider>
 );

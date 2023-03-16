@@ -40,6 +40,7 @@ namespace VolunteeringPlatform.Controllers
             string? address,
             string? fromDate,
             string? toDate,
+            bool onlyJoined = false,
             int pageNumber = 1, int pageSize = 4)
         {
             var stream = Request.Headers["JWT-Token"];
@@ -58,6 +59,8 @@ namespace VolunteeringPlatform.Controllers
             }
 
             var jti = tokenS.Claims.First(claim => claim.Type == "exp").Value;
+
+            var userName = tokenS.Claims.First(claim => claim.Type == "username").Value;
    
             var timeReq = dateTime.AddSeconds(Int64.Parse(jti)).ToLocalTime();
 
@@ -72,10 +75,13 @@ namespace VolunteeringPlatform.Controllers
             }
 
             var (eventEntities, paginationMetadata) = await _repository
-                .GetEventsAsync(name, searchQuery, eventType, address, fromDate,toDate, pageNumber, pageSize);
+                .GetEventsAsync(name, searchQuery, eventType, address, fromDate,toDate, pageNumber, pageSize,onlyJoined ,userName);
 
             Response.Headers.Add("Pagination",
                 JsonSerializer.Serialize(paginationMetadata));
+
+            Console.WriteLine( Directory.GetCurrentDirectory() );
+            Console.WriteLine("sadddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd");
 
             return Ok(_mapper.Map<IEnumerable<EventDto>>(eventEntities));
         }
@@ -118,6 +124,7 @@ namespace VolunteeringPlatform.Controllers
         public async Task<ActionResult<EventDto>> CreateEvent(
             EventForCreationDto newEvent)
         {
+
             var stream = Request.Headers["JWT-Token"];
 
             if (stream.IsNullOrEmpty())

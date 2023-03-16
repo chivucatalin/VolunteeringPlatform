@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { TextField, Typography, Grid, Button } from '@mui/material'
 import { useNavigate } from "react-router-dom";
+import { useSnackbar } from 'notistack'
 
 
 import { useSelector } from 'react-redux'
@@ -18,6 +19,7 @@ export const VerifyAccount = () => {
     const navigate = useNavigate();
     const verify = React.useRef('')
     const { user } = useSelector(state => state.user)
+    const { enqueueSnackbar } = useSnackbar()
 
     //daca ce se scrie in text field e la fel ca codul salvat in state management ,e treu
     const checkCode = () => {
@@ -51,6 +53,15 @@ export const VerifyAccount = () => {
 
             navigate(`/`)
             window.location.reload(false);
+
+            enqueueSnackbar('Account created! ', {
+                variant: 'success',
+                anchorOrigin: {
+                    vertical: 'top',
+                    horizontal: 'center',
+                },
+                autoHideDuration: 2000,
+            });
     }
     return (
         <Grid container={true} sx={fieldStyle}>

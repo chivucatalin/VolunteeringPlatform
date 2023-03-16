@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace VolunteeringPlatform.Entities
 {
@@ -27,5 +28,6 @@ namespace VolunteeringPlatform.Entities
         [Required]
 
         public bool isAdmin { get; set; }
+        public ICollection<JoinedEvent>? JoinedEvents { get; set; }
     }
 }

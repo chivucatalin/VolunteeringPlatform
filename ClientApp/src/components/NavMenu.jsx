@@ -8,41 +8,26 @@ import { useCookies } from 'react-cookie'
 import jwt from 'jwt-decode'
 import LogoutIcon from '@mui/icons-material/Logout';
 
-
-
-const settings = ['Profile', 'Archive', 'Orders and Payments'];
-
 //navigation bar-ul cu paginile de acces si contul tau
 export const NavMenu = () => {
   const navigate = useNavigate();
+  // eslint-disable-next-line no-unused-vars
   const [cookies ,setCookie,removeCookie] = useCookies(['token','name'])
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [createEventShow, setCreateEventShow] = React.useState(false)
 
   React.useEffect(() => {
     const user = jwt(cookies.token);
     if (user.admin === "True") setCreateEventShow(true)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget)
-  }
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" >
         <Toolbar>
-          <Box sx={{
-            display: 'flex',
-            alignItems: 'flex-end',
-            borderRadius: 1, flexGrow: 1
-          }}>
+          <Box sx={{ flexGrow: 1, display: 'flex' }}>
             <Typography variant="h6" component="div" sx={{
+              cursor:'pointer',
               p: 1,
               m: 1
             }}
@@ -52,6 +37,7 @@ export const NavMenu = () => {
               Home
             </Typography>
             <Typography variant="h6" component="div" sx={{
+              cursor:'pointer',
               p: 1,
               m: 1
             }}
@@ -61,13 +47,17 @@ export const NavMenu = () => {
               Events
             </Typography>
             <Typography variant="h6" component="div" sx={{
+              cursor:'pointer',
               p: 1,
               m: 1
+            }} onClick={() => {
+              navigate(`chatroom`)
             }}>
               Messages
             </Typography>
             {createEventShow && (
               <Typography variant="h6" component="div" sx={{
+                cursor:'pointer',
                 p: 1,
                 m: 1
               }}
@@ -86,7 +76,7 @@ export const NavMenu = () => {
               sx={{ mr: 2 }}
               onClick={() => {
                 removeCookie('token');
-                removeCookie('user');
+                removeCookie('name');
                 navigate('/')
                 window.location.reload(false)
               }}
@@ -94,32 +84,8 @@ export const NavMenu = () => {
               <LogoutIcon />
             </IconButton>
           </Tooltip>
-          <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-            <Avatar alt="Remy Sharp" src={`https://avatars.dicebear.com/api/personas/${cookies.name}.svg`} />
-          </IconButton>
+          <Avatar alt="Remy Sharp" sx={{ p: 0 }} src={`https://avatars.dicebear.com/api/personas/${cookies.name}.svg`} />
         </Toolbar>
-        <Menu
-          sx={{ mt: '45px' }}
-          id="menu-appbar"
-          anchorEl={anchorElUser}
-          anchorOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          keepMounted
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          open={Boolean(anchorElUser)}
-          onClose={handleCloseUserMenu}
-        >
-          {settings.map((setting) => (
-            <MenuItem key={setting} onClick={handleCloseUserMenu}>
-              <Typography textAlign="center">{setting}</Typography>
-            </MenuItem>
-          ))}
-        </Menu>
       </AppBar>
     </Box>
   );

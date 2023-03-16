@@ -78,7 +78,7 @@ export const EventMap = (props) => {
                 attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
                 url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
             />
-            {props.type === 'details' ? (<Circle center={[map.latitude, map.longitude]} radius={20}>
+            {props.type === 'create' ? (<Circle center={[map.latitude, map.longitude]} radius={20}>
                 <Popup >
                     <div>
                         {map.address}
@@ -92,7 +92,7 @@ export const EventMap = (props) => {
                         </div>
                     </Popup>
                 </Marker>}
-            {props.type === 'details' ? (<LocationMarker />) : (null)}
-            <ChangeCenter coords={[map.latitude, map.longitude]} />
+            {props.type === 'create' ? (<LocationMarker />) : (null)}
+            {props.type === 'create' ? <ChangeCenter coords={[map.latitude, map.longitude]} /> : (null)}
         </MapContainer>)
 }

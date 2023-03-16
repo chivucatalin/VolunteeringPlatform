@@ -47,7 +47,7 @@ namespace VolunteeringPlatform.Controllers
               .Select(s => s[random.Next(s.Length)]).ToArray());
 
             _mailService.Send("Account Create Verification Code",
-                "Please write this code in order to verify your e-mail : "+code, "chivu.catalin@yahoo.com");
+                "Please write this code in order to verify your e-mail : "+code, email);
 
             Response.Headers.Add("Verification-Code",
                code);

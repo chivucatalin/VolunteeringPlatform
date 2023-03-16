@@ -11,7 +11,7 @@ const reducer = combineReducers({
   filter,
   pagination,
   map,
-  user
+  user,
 })
 const store = configureStore({
   reducer,

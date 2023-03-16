@@ -11,6 +11,7 @@ const slice = createSlice({
             fromDate:dayjs().format('MM-DD-YYYY'),
             toDate:dayjs().add(30,'days').format('MM-DD-YYYY'),
             searchQuery:"",
+            onlyJoined:false
         },
     },
     reducers: {
@@ -22,6 +23,7 @@ const slice = createSlice({
             state.filter.searchQuery=action.payload.searchQuery;
             if(action.payload.eventType || action.payload.eventType===0) state.filter.eventType=action.payload.eventType;
             else delete state.filter.eventType;
+            state.filter.onlyJoined = action.payload.onlyJoined
         }
     },
 });
