@@ -1,2 +1,6 @@
-# VolunteeringPlatformReactProject
-React Project for the course "Frontend Avansat".The project is not done ,considering that it will be used as my final project for the bachelor's degree. So even though some functionalities /designs have not been added,it still is an useable project .
+# VolunteeringPlatform Final Bachelor Project
+Bachelor Project that creates a volunteering platform for people to see events ,join them and chat .
+
+The technologies used are : ASP .Net Core,Entity Framework,React .js,SQlite
+
+In this project I also create real life features like real-time chatting ,sending automatic emails ,creating accounts and using authorization/authentification with JWT ,creating scheduled tasks and many more ! 
