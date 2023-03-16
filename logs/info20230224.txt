@@ -1,0 +1,429 @@
+2023-02-24 22:56:41.664 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-02-24 22:56:42.079 +02:00 [DBG] Registered SignalR Protocol: json, implemented by Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.
+2023-02-24 22:56:42.596 +02:00 [DBG] Hosting starting
+2023-02-24 22:56:43.525 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 172066105ED2EA7458D6A893FEF718E12058CD6D)
+2023-02-24 22:56:43.598 +02:00 [INF] Now listening on: https://localhost:7039
+2023-02-24 22:56:43.601 +02:00 [INF] Now listening on: http://localhost:5039
+2023-02-24 22:56:43.603 +02:00 [DBG] Loaded hosting startup assembly VolunteeringPlatform
+2023-02-24 22:56:43.607 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.SpaProxy
+2023-02-24 22:56:43.608 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-02-24 22:56:43.610 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-02-24 22:56:43.611 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-24 22:56:43.613 +02:00 [INF] Hosting environment: Development
+2023-02-24 22:56:43.615 +02:00 [INF] Content root path: C:\Users\Catalin\source\repos\VolunteeringPlatform\
+2023-02-24 22:56:43.622 +02:00 [DBG] Hosting started
+2023-02-24 22:56:43.654 +02:00 [DBG] Connection id "0HMOML6H9O7N9" accepted.
+2023-02-24 22:56:43.657 +02:00 [DBG] Connection id "0HMOML6H9O7N9" started.
+2023-02-24 22:56:44.001 +02:00 [DBG] Connection id "0HMOML6H9O7NA" accepted.
+2023-02-24 22:56:44.003 +02:00 [DBG] Connection id "0HMOML6H9O7NA" started.
+2023-02-24 22:56:45.301 +02:00 [DBG] Connection id "0HMOML6H9O7NB" accepted.
+2023-02-24 22:56:48.199 +02:00 [DBG] Connection id "0HMOML6H9O7NB" started.
+2023-02-24 22:56:48.655 +02:00 [DBG] Connection 0HMOML6H9O7NB established using the following protocol: "Tls12"
+2023-02-24 22:56:49.484 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7039/ - -
+2023-02-24 22:56:53.710 +02:00 [DBG] Authentication of the HTTPS connection timed out.
+2023-02-24 22:56:53.723 +02:00 [DBG] Connection id "0HMOML6H9O7N9" stopped.
+2023-02-24 22:56:53.727 +02:00 [DBG] Connection id "0HMOML6H9O7N9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-02-24 22:56:54.037 +02:00 [DBG] Authentication of the HTTPS connection timed out.
+2023-02-24 22:56:54.040 +02:00 [DBG] Connection id "0HMOML6H9O7NA" stopped.
+2023-02-24 22:56:54.042 +02:00 [DBG] Connection id "0HMOML6H9O7NA" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-02-24 22:56:54.901 +02:00 [DBG] Failed to connect to the SPA Development proxy.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:44413)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Microsoft.AspNetCore.SpaProxy.SpaProxyLaunchManager.IsSpaProxyRunning(CancellationToken cancellationToken)
+2023-02-24 22:56:54.978 +02:00 [INF] No SPA development server running at https://localhost:44413 found.
+2023-02-24 22:56:55.327 +02:00 [DBG] Watch process 'System.Diagnostics.Process (powershell)' started.
+2023-02-24 22:56:55.442 +02:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2023-02-24 22:56:55.504 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7039/ - - - 200 - text/html 6028.8684ms
+2023-02-24 22:56:56.451 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7039/favicon.ico - -
+2023-02-24 22:56:56.488 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-02-24 22:56:56.496 +02:00 [DBG] The request path /favicon.ico does not match an existing file
+2023-02-24 22:56:56.568 +02:00 [DBG] 1 candidate(s) found for the request path '/favicon.ico'
+2023-02-24 22:56:56.583 +02:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'favicon.ico' for the request path '/favicon.ico'
+2023-02-24 22:56:56.597 +02:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/favicon.ico'
+2023-02-24 22:56:56.599 +02:00 [DBG] Request did not match any endpoints
+2023-02-24 22:56:56.601 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7039/favicon.ico - - - 404 0 - 149.6000ms
+2023-02-24 22:56:57.492 +02:00 [DBG] Connection id "0HMOML6H9O7NB" received FIN.
+2023-02-24 22:56:57.517 +02:00 [DBG] Connection id "0HMOML6H9O7NB" is closed. The last processed stream ID was 3.
+2023-02-24 22:56:57.526 +02:00 [DBG] Connection id "0HMOML6H9O7NB" sending FIN because: "The client closed the connection."
+2023-02-24 22:56:57.535 +02:00 [DBG] Connection id "0HMOML6H9O7NB" stopped.
+2023-02-24 22:56:59.552 +02:00 [DBG] Connection id "0HMOML6H9O7NC" accepted.
+2023-02-24 22:56:59.555 +02:00 [DBG] Connection id "0HMOML6H9O7NC" started.
+2023-02-24 22:56:59.568 +02:00 [DBG] Connection 0HMOML6H9O7NC established using the following protocol: "Tls12"
+2023-02-24 22:56:59.572 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7039/ - -
+2023-02-24 22:57:00.298 +02:00 [DBG] Failed to connect to the SPA Development proxy.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:44413)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Microsoft.AspNetCore.SpaProxy.SpaProxyLaunchManager.ProbeSpaDevelopmentServerUrl(HttpClient httpClient, CancellationToken cancellationToken)
+2023-02-24 22:57:04.537 +02:00 [DBG] Failed to connect to the SPA Development proxy.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:44413)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Microsoft.AspNetCore.SpaProxy.SpaProxyLaunchManager.IsSpaProxyRunning(CancellationToken cancellationToken)
+2023-02-24 22:57:04.584 +02:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2023-02-24 22:57:04.617 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7039/ - - - 200 - text/html 5044.8076ms
+2023-02-24 22:57:06.236 +02:00 [DBG] Failed to connect to the SPA Development proxy.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:44413)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Microsoft.AspNetCore.SpaProxy.SpaProxyLaunchManager.ProbeSpaDevelopmentServerUrl(HttpClient httpClient, CancellationToken cancellationToken)
+2023-02-24 22:57:07.478 +02:00 [DBG] Connection id "0HMOML6H9O7NC" received FIN.
+2023-02-24 22:57:07.492 +02:00 [DBG] Connection id "0HMOML6H9O7NC" is closed. The last processed stream ID was 1.
+2023-02-24 22:57:07.495 +02:00 [DBG] Connection id "0HMOML6H9O7NC" sending FIN because: "The client closed the connection."
+2023-02-24 22:57:07.505 +02:00 [DBG] Connection id "0HMOML6H9O7NC" stopped.
+2023-02-24 22:57:11.092 +02:00 [DBG] Connection id "0HMOML6H9O7ND" accepted.
+2023-02-24 22:57:11.097 +02:00 [DBG] Connection id "0HMOML6H9O7ND" started.
+2023-02-24 22:57:11.106 +02:00 [DBG] Connection 0HMOML6H9O7ND established using the following protocol: "Tls12"
+2023-02-24 22:57:11.109 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7039/ - -
+2023-02-24 22:57:17.473 +02:00 [DBG] Failed to connect to the SPA Development proxy.
+System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Microsoft.AspNetCore.SpaProxy.SpaProxyLaunchManager.ProbeSpaDevelopmentServerUrl(HttpClient httpClient, CancellationToken cancellationToken)
+2023-02-24 22:57:21.993 +02:00 [DBG] Failed to connect to the SPA Development proxy.
+System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Microsoft.AspNetCore.SpaProxy.SpaProxyLaunchManager.IsSpaProxyRunning(CancellationToken cancellationToken)
+2023-02-24 22:57:22.199 +02:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2023-02-24 22:57:22.811 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7039/ - - - 200 - text/html 11701.6926ms
+2023-02-24 22:57:27.482 +02:00 [DBG] Connection id "0HMOML6H9O7ND" received FIN.
+2023-02-24 22:57:27.498 +02:00 [DBG] Connection id "0HMOML6H9O7ND" is closed. The last processed stream ID was 1.
+2023-02-24 22:57:27.503 +02:00 [DBG] Connection id "0HMOML6H9O7ND" sending FIN because: "The client closed the connection."
+2023-02-24 22:57:27.509 +02:00 [DBG] Connection id "0HMOML6H9O7ND" stopped.
+2023-02-24 22:57:28.521 +02:00 [DBG] Failed to connect to the SPA Development proxy.
+System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Microsoft.AspNetCore.SpaProxy.SpaProxyLaunchManager.ProbeSpaDevelopmentServerUrl(HttpClient httpClient, CancellationToken cancellationToken)
+2023-02-24 22:57:29.154 +02:00 [DBG] Connection id "0HMOML6H9O7NE" accepted.
+2023-02-24 22:57:29.157 +02:00 [DBG] Connection id "0HMOML6H9O7NE" started.
+2023-02-24 22:57:29.170 +02:00 [DBG] Connection 0HMOML6H9O7NE established using the following protocol: "Tls12"
+2023-02-24 22:57:29.174 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7039/ - -
+2023-02-24 22:57:36.172 +02:00 [INF] SPA proxy is ready. Redirecting to https://localhost:44413.
+2023-02-24 22:57:36.177 +02:00 [INF] SPA development server running at 'https://localhost:44413'
+2023-02-24 22:57:36.184 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7039/ - - - 302 0 - 7009.5376ms
+2023-02-24 22:57:37.498 +02:00 [DBG] Connection id "0HMOML6H9O7NE" received FIN.
+2023-02-24 22:57:37.536 +02:00 [DBG] Connection id "0HMOML6H9O7NE" is closed. The last processed stream ID was 1.
+2023-02-24 22:57:37.567 +02:00 [DBG] Connection id "0HMOML6H9O7NE" sending FIN because: "The client closed the connection."
+2023-02-24 22:57:37.576 +02:00 [DBG] Connection id "0HMOML6H9O7NE" stopped.
+2023-02-24 23:01:15.491 +02:00 [DBG] Connection id "0HMOML6H9O7NF" accepted.
+2023-02-24 23:01:15.499 +02:00 [DBG] Connection id "0HMOML6H9O7NF" started.
+2023-02-24 23:01:15.521 +02:00 [DBG] Connection 0HMOML6H9O7NF established using the following protocol: "Tls12"
+2023-02-24 23:01:15.572 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44413/users/Osimamam/kingata100 - -
+2023-02-24 23:01:15.582 +02:00 [DBG] The request path /users/Osimamam/kingata100 does not match a supported file type
+2023-02-24 23:01:15.589 +02:00 [DBG] 2 candidate(s) found for the request path '/users/Osimamam/kingata100'
+2023-02-24 23:01:15.591 +02:00 [DBG] Endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)' with route pattern '{controller}/{username}/{password}' is valid for the request path '/users/Osimamam/kingata100'
+2023-02-24 23:01:15.593 +02:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/users/Osimamam/kingata100'
+2023-02-24 23:01:15.597 +02:00 [DBG] Request matched endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)'
+2023-02-24 23:01:15.601 +02:00 [INF] Executing endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)'
+2023-02-24 23:01:15.740 +02:00 [INF] Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.String, System.String) on controller VolunteeringPlatform.Controllers.UsersController (VolunteeringPlatform).
+2023-02-24 23:01:15.744 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-02-24 23:01:15.746 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-02-24 23:01:15.747 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-02-24 23:01:15.749 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-02-24 23:01:15.752 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-02-24 23:01:15.755 +02:00 [DBG] Executing controller factory for controller VolunteeringPlatform.Controllers.UsersController (VolunteeringPlatform)
+2023-02-24 23:01:16.374 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-02-24 23:01:16.422 +02:00 [DBG] Executed controller factory for controller VolunteeringPlatform.Controllers.UsersController (VolunteeringPlatform)
+2023-02-24 23:01:16.432 +02:00 [DBG] Attempting to bind parameter 'username' of type 'System.String' ...
+2023-02-24 23:01:16.437 +02:00 [DBG] Attempting to bind parameter 'username' of type 'System.String' using the name 'username' in request data ...
+2023-02-24 23:01:16.441 +02:00 [DBG] Done attempting to bind parameter 'username' of type 'System.String'.
+2023-02-24 23:01:16.442 +02:00 [DBG] Done attempting to bind parameter 'username' of type 'System.String'.
+2023-02-24 23:01:16.443 +02:00 [DBG] Attempting to validate the bound parameter 'username' of type 'System.String' ...
+2023-02-24 23:01:16.455 +02:00 [DBG] Done attempting to validate the bound parameter 'username' of type 'System.String'.
+2023-02-24 23:01:16.459 +02:00 [DBG] Attempting to bind parameter 'password' of type 'System.String' ...
+2023-02-24 23:01:16.461 +02:00 [DBG] Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2023-02-24 23:01:16.463 +02:00 [DBG] Done attempting to bind parameter 'password' of type 'System.String'.
+2023-02-24 23:01:16.464 +02:00 [DBG] Done attempting to bind parameter 'password' of type 'System.String'.
+2023-02-24 23:01:16.465 +02:00 [DBG] Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2023-02-24 23:01:16.467 +02:00 [DBG] Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2023-02-24 23:01:17.797 +02:00 [DBG] Entity Framework Core 7.0.0 initialized 'VolunteeringPlatformContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.0' with options: None
+2023-02-24 23:01:17.916 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .Where(c => c.Username == __username_0 && c.Password == __HashPassword_1)
+    .FirstOrDefault()'
+2023-02-24 23:01:18.443 +02:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<User>(
+    asyncEnumerable: new SingleQueryingEnumerable<User>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.AssociationId (int) Required, 1], [Property: User.Email (string) Required MaxLength(50), 2], [Property: User.Password (string) Required MaxLength(50), 3], [Property: User.Username (string) Required MaxLength(50), 4], [Property: User.isAdmin (bool) Required, 5] }
+            SELECT TOP(1) u.Id, u.AssociationId, u.Email, u.Password, u.Username, u.isAdmin
+            FROM Users AS u
+            WHERE (u.Username == @__username_0) && (u.Password == @__HashPassword_1)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+        VolunteeringPlatform.DbContexts.VolunteeringPlatformContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-02-24 23:01:18.533 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-02-24 23:01:18.537 +02:00 [DBG] Creating DbConnection.
+2023-02-24 23:01:18.579 +02:00 [DBG] Created DbConnection. (36ms).
+2023-02-24 23:01:18.585 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (55ms).
+2023-02-24 23:01:18.592 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (62ms).
+2023-02-24 23:01:18.608 +02:00 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-02-24 23:01:18.648 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-02-24 23:01:18.673 +02:00 [DBG] Executing DbCommand [Parameters=[@__username_0='?' (Size = 8), @__HashPassword_1='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AssociationId", "u"."Email", "u"."Password", "u"."Username", "u"."isAdmin"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__username_0 AND "u"."Password" = @__HashPassword_1
+LIMIT 1
+2023-02-24 23:01:18.720 +02:00 [INF] Executed DbCommand (53ms) [Parameters=[@__username_0='?' (Size = 8), @__HashPassword_1='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AssociationId", "u"."Email", "u"."Password", "u"."Username", "u"."isAdmin"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__username_0 AND "u"."Password" = @__HashPassword_1
+LIMIT 1
+2023-02-24 23:01:18.775 +02:00 [DBG] Context 'VolunteeringPlatformContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-02-24 23:01:18.814 +02:00 [DBG] Closing data reader to 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-02-24 23:01:18.826 +02:00 [DBG] A data reader for 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db' is being disposed after spending 94ms reading results.
+2023-02-24 23:01:18.837 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-02-24 23:01:18.849 +02:00 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (11ms).
+2023-02-24 23:01:19.292 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-02-24 23:01:19.310 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-02-24 23:01:19.312 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-02-24 23:01:19.323 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-02-24 23:01:19.327 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-02-24 23:01:19.330 +02:00 [INF] Executing OkObjectResult, writing value of type 'VolunteeringPlatform.Models.UserDto'.
+2023-02-24 23:01:19.680 +02:00 [DBG] Connection id "0HMOML6H9O7NF" received FIN.
+2023-02-24 23:01:19.686 +02:00 [INF] Executed action VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform) in 3920.3663ms
+2023-02-24 23:01:19.691 +02:00 [DBG] Connection id "0HMOML6H9O7NG" accepted.
+2023-02-24 23:01:19.692 +02:00 [DBG] Connection id "0HMOML6H9O7NF" sending FIN because: "The client closed the connection."
+2023-02-24 23:01:19.695 +02:00 [INF] Executed endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)'
+2023-02-24 23:01:19.698 +02:00 [DBG] Connection id "0HMOML6H9O7NF" disconnecting.
+2023-02-24 23:01:19.696 +02:00 [DBG] Connection id "0HMOML6H9O7NG" started.
+2023-02-24 23:01:19.710 +02:00 [DBG] Connection id "0HMOML6H9O7NF" completed keep alive response.
+2023-02-24 23:01:19.721 +02:00 [DBG] Connection 0HMOML6H9O7NG established using the following protocol: "Tls12"
+2023-02-24 23:01:19.722 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44413/users/Osimamam/kingata100 - -
+2023-02-24 23:01:19.724 +02:00 [DBG] The request path /users/Osimamam/kingata100 does not match a supported file type
+2023-02-24 23:01:19.726 +02:00 [DBG] 2 candidate(s) found for the request path '/users/Osimamam/kingata100'
+2023-02-24 23:01:19.728 +02:00 [DBG] Endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)' with route pattern '{controller}/{username}/{password}' is valid for the request path '/users/Osimamam/kingata100'
+2023-02-24 23:01:19.730 +02:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/users/Osimamam/kingata100'
+2023-02-24 23:01:19.731 +02:00 [DBG] 'VolunteeringPlatformContext' disposed.
+2023-02-24 23:01:19.734 +02:00 [DBG] Request matched endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)'
+2023-02-24 23:01:19.736 +02:00 [INF] Executing endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)'
+2023-02-24 23:01:19.738 +02:00 [INF] Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.String, System.String) on controller VolunteeringPlatform.Controllers.UsersController (VolunteeringPlatform).
+2023-02-24 23:01:19.741 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-02-24 23:01:19.742 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-02-24 23:01:19.744 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-02-24 23:01:19.746 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-02-24 23:01:19.749 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-02-24 23:01:19.751 +02:00 [DBG] Disposing connection to database 'main' on server 'CityInfo.db'.
+2023-02-24 23:01:19.752 +02:00 [DBG] Executing controller factory for controller VolunteeringPlatform.Controllers.UsersController (VolunteeringPlatform)
+2023-02-24 23:01:19.756 +02:00 [DBG] Executed controller factory for controller VolunteeringPlatform.Controllers.UsersController (VolunteeringPlatform)
+2023-02-24 23:01:19.758 +02:00 [DBG] Disposed connection to database 'main' on server 'CityInfo.db' (5ms).
+2023-02-24 23:01:19.758 +02:00 [DBG] Attempting to bind parameter 'username' of type 'System.String' ...
+2023-02-24 23:01:19.776 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:44413/users/Osimamam/kingata100 - - - 200 150 application/json;+charset=utf-8 4205.1287ms
+2023-02-24 23:01:19.777 +02:00 [DBG] Attempting to bind parameter 'username' of type 'System.String' using the name 'username' in request data ...
+2023-02-24 23:01:19.781 +02:00 [DBG] Done attempting to bind parameter 'username' of type 'System.String'.
+2023-02-24 23:01:19.779 +02:00 [DBG] Connection id "0HMOML6H9O7NF" stopped.
+2023-02-24 23:01:19.783 +02:00 [DBG] Done attempting to bind parameter 'username' of type 'System.String'.
+2023-02-24 23:01:19.786 +02:00 [DBG] Attempting to validate the bound parameter 'username' of type 'System.String' ...
+2023-02-24 23:01:19.787 +02:00 [DBG] Done attempting to validate the bound parameter 'username' of type 'System.String'.
+2023-02-24 23:01:19.789 +02:00 [DBG] Attempting to bind parameter 'password' of type 'System.String' ...
+2023-02-24 23:01:19.790 +02:00 [DBG] Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2023-02-24 23:01:19.792 +02:00 [DBG] Done attempting to bind parameter 'password' of type 'System.String'.
+2023-02-24 23:01:19.793 +02:00 [DBG] Done attempting to bind parameter 'password' of type 'System.String'.
+2023-02-24 23:01:19.795 +02:00 [DBG] Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2023-02-24 23:01:19.796 +02:00 [DBG] Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2023-02-24 23:01:19.801 +02:00 [DBG] Entity Framework Core 7.0.0 initialized 'VolunteeringPlatformContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.0' with options: None
+2023-02-24 23:01:19.814 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-02-24 23:01:19.816 +02:00 [DBG] Creating DbConnection.
+2023-02-24 23:01:19.818 +02:00 [DBG] Created DbConnection. (1ms).
+2023-02-24 23:01:19.819 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (4ms).
+2023-02-24 23:01:19.821 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (6ms).
+2023-02-24 23:01:19.823 +02:00 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-02-24 23:01:19.824 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-02-24 23:01:19.826 +02:00 [DBG] Executing DbCommand [Parameters=[@__username_0='?' (Size = 8), @__HashPassword_1='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AssociationId", "u"."Email", "u"."Password", "u"."Username", "u"."isAdmin"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__username_0 AND "u"."Password" = @__HashPassword_1
+LIMIT 1
+2023-02-24 23:01:19.829 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 8), @__HashPassword_1='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AssociationId", "u"."Email", "u"."Password", "u"."Username", "u"."isAdmin"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__username_0 AND "u"."Password" = @__HashPassword_1
+LIMIT 1
+2023-02-24 23:01:19.834 +02:00 [DBG] Context 'VolunteeringPlatformContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-02-24 23:01:19.836 +02:00 [DBG] Closing data reader to 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-02-24 23:01:19.838 +02:00 [DBG] A data reader for 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db' is being disposed after spending 3ms reading results.
+2023-02-24 23:01:19.840 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-02-24 23:01:19.842 +02:00 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (1ms).
+2023-02-24 23:01:19.844 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-02-24 23:01:19.849 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-02-24 23:01:19.850 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-02-24 23:01:19.851 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-02-24 23:01:19.852 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-02-24 23:01:19.854 +02:00 [INF] Executing OkObjectResult, writing value of type 'VolunteeringPlatform.Models.UserDto'.
+2023-02-24 23:01:19.856 +02:00 [INF] Executed action VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform) in 104.3319ms
+2023-02-24 23:01:19.858 +02:00 [INF] Executed endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)'
+2023-02-24 23:01:19.857 +02:00 [DBG] Connection id "0HMOML6H9O7NG" received FIN.
+2023-02-24 23:01:19.861 +02:00 [DBG] Connection id "0HMOML6H9O7NG" sending FIN because: "The client closed the connection."
+2023-02-24 23:01:19.860 +02:00 [DBG] Connection id "0HMOML6H9O7NG" completed keep alive response.
+2023-02-24 23:01:19.868 +02:00 [DBG] Connection id "0HMOML6H9O7NH" accepted.
+2023-02-24 23:01:19.874 +02:00 [DBG] 'VolunteeringPlatformContext' disposed.
+2023-02-24 23:01:19.876 +02:00 [DBG] Connection id "0HMOML6H9O7NG" disconnecting.
+2023-02-24 23:01:19.890 +02:00 [DBG] Disposing connection to database 'main' on server 'CityInfo.db'.
+2023-02-24 23:01:19.892 +02:00 [DBG] Disposed connection to database 'main' on server 'CityInfo.db' (2ms).
+2023-02-24 23:01:19.896 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:44413/users/Osimamam/kingata100 - - - 200 150 application/json;+charset=utf-8 173.6064ms
+2023-02-24 23:01:19.891 +02:00 [DBG] Connection id "0HMOML6H9O7NH" started.
+2023-02-24 23:01:19.900 +02:00 [DBG] Connection id "0HMOML6H9O7NG" stopped.
+2023-02-24 23:01:19.962 +02:00 [DBG] Connection 0HMOML6H9O7NH established using the following protocol: "Tls12"
+2023-02-24 23:01:19.976 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44413/users/Osimamam/kingata100 - -
+2023-02-24 23:01:19.995 +02:00 [DBG] The request path /users/Osimamam/kingata100 does not match a supported file type
+2023-02-24 23:01:19.996 +02:00 [DBG] 2 candidate(s) found for the request path '/users/Osimamam/kingata100'
+2023-02-24 23:01:20.002 +02:00 [DBG] Endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)' with route pattern '{controller}/{username}/{password}' is valid for the request path '/users/Osimamam/kingata100'
+2023-02-24 23:01:20.005 +02:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/users/Osimamam/kingata100'
+2023-02-24 23:01:20.007 +02:00 [DBG] Request matched endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)'
+2023-02-24 23:01:20.008 +02:00 [INF] Executing endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)'
+2023-02-24 23:01:20.010 +02:00 [INF] Route matched with {action = "GetUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser(System.String, System.String) on controller VolunteeringPlatform.Controllers.UsersController (VolunteeringPlatform).
+2023-02-24 23:01:20.013 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-02-24 23:01:20.023 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-02-24 23:01:20.026 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-02-24 23:01:20.029 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-02-24 23:01:20.035 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-02-24 23:01:20.037 +02:00 [DBG] Executing controller factory for controller VolunteeringPlatform.Controllers.UsersController (VolunteeringPlatform)
+2023-02-24 23:01:20.044 +02:00 [DBG] Executed controller factory for controller VolunteeringPlatform.Controllers.UsersController (VolunteeringPlatform)
+2023-02-24 23:01:20.046 +02:00 [DBG] Attempting to bind parameter 'username' of type 'System.String' ...
+2023-02-24 23:01:20.051 +02:00 [DBG] Attempting to bind parameter 'username' of type 'System.String' using the name 'username' in request data ...
+2023-02-24 23:01:20.053 +02:00 [DBG] Done attempting to bind parameter 'username' of type 'System.String'.
+2023-02-24 23:01:20.055 +02:00 [DBG] Done attempting to bind parameter 'username' of type 'System.String'.
+2023-02-24 23:01:20.056 +02:00 [DBG] Attempting to validate the bound parameter 'username' of type 'System.String' ...
+2023-02-24 23:01:20.058 +02:00 [DBG] Done attempting to validate the bound parameter 'username' of type 'System.String'.
+2023-02-24 23:01:20.060 +02:00 [DBG] Attempting to bind parameter 'password' of type 'System.String' ...
+2023-02-24 23:01:20.061 +02:00 [DBG] Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2023-02-24 23:01:20.066 +02:00 [DBG] Done attempting to bind parameter 'password' of type 'System.String'.
+2023-02-24 23:01:20.069 +02:00 [DBG] Done attempting to bind parameter 'password' of type 'System.String'.
+2023-02-24 23:01:20.071 +02:00 [DBG] Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2023-02-24 23:01:20.074 +02:00 [DBG] Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2023-02-24 23:01:20.262 +02:00 [DBG] Entity Framework Core 7.0.0 initialized 'VolunteeringPlatformContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.0' with options: None
+2023-02-24 23:01:20.307 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-02-24 23:01:20.308 +02:00 [DBG] Creating DbConnection.
+2023-02-24 23:01:20.310 +02:00 [DBG] Created DbConnection. (1ms).
+2023-02-24 23:01:20.311 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (4ms).
+2023-02-24 23:01:20.312 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (5ms).
+2023-02-24 23:01:20.316 +02:00 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-02-24 23:01:20.318 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-02-24 23:01:20.320 +02:00 [DBG] Executing DbCommand [Parameters=[@__username_0='?' (Size = 8), @__HashPassword_1='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AssociationId", "u"."Email", "u"."Password", "u"."Username", "u"."isAdmin"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__username_0 AND "u"."Password" = @__HashPassword_1
+LIMIT 1
+2023-02-24 23:01:20.323 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 8), @__HashPassword_1='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AssociationId", "u"."Email", "u"."Password", "u"."Username", "u"."isAdmin"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__username_0 AND "u"."Password" = @__HashPassword_1
+LIMIT 1
+2023-02-24 23:01:20.327 +02:00 [DBG] Context 'VolunteeringPlatformContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-02-24 23:01:20.357 +02:00 [DBG] Closing data reader to 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-02-24 23:01:20.362 +02:00 [DBG] A data reader for 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db' is being disposed after spending 34ms reading results.
+2023-02-24 23:01:20.369 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-02-24 23:01:20.371 +02:00 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (2ms).
+2023-02-24 23:01:20.373 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-02-24 23:01:20.379 +02:00 [DBG] No information found on request to perform content negotiation.
+2023-02-24 23:01:20.386 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-02-24 23:01:20.387 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-02-24 23:01:20.388 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-02-24 23:01:20.390 +02:00 [INF] Executing OkObjectResult, writing value of type 'VolunteeringPlatform.Models.UserDto'.
+2023-02-24 23:01:20.393 +02:00 [INF] Executed action VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform) in 355.7736ms
+2023-02-24 23:01:20.394 +02:00 [DBG] Connection id "0HMOML6H9O7NH" received FIN.
+2023-02-24 23:01:20.398 +02:00 [DBG] Connection id "0HMOML6H9O7NH" sending FIN because: "The client closed the connection."
+2023-02-24 23:01:20.398 +02:00 [INF] Executed endpoint 'VolunteeringPlatform.Controllers.UsersController.GetUser (VolunteeringPlatform)'
+2023-02-24 23:01:20.400 +02:00 [DBG] Connection id "0HMOML6H9O7NH" disconnecting.
+2023-02-24 23:01:20.402 +02:00 [DBG] Connection id "0HMOML6H9O7NH" completed keep alive response.
+2023-02-24 23:01:20.403 +02:00 [DBG] 'VolunteeringPlatformContext' disposed.
+2023-02-24 23:01:20.405 +02:00 [DBG] Disposing connection to database 'main' on server 'CityInfo.db'.
+2023-02-24 23:01:20.407 +02:00 [DBG] Disposed connection to database 'main' on server 'CityInfo.db' (1ms).
+2023-02-24 23:01:20.410 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:44413/users/Osimamam/kingata100 - - - 200 150 application/json;+charset=utf-8 433.6483ms
+2023-02-24 23:01:20.413 +02:00 [DBG] Connection id "0HMOML6H9O7NH" stopped.

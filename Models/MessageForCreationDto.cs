@@ -1,4 +1,4 @@
-﻿namespace Volunteering_Platform.Models
+﻿namespace VolunteeringPlatform.Models
 {
     public class MessageForCreationDto
     {

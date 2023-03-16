@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Volunteering_Platform.Entities;
+using VolunteeringPlatform.Entities;
 using VolunteeringPlatform.DbContexts;
 
 namespace VolunteeringPlatform.Services

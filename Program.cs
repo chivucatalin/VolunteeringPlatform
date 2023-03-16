@@ -6,6 +6,16 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Volunteering_Platform.Services;
 using Volunteering_Platform.Hubs;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.AspNet.SignalR;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Quartz;
+using Quartz.Impl;
+using Volunteering_Platform;
+using Hangfire;
+using Volunteering_Platform.Jobs;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -17,6 +27,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+
+
 builder.Host.UseSerilog();
 builder.Services.AddControllers(options =>
 {
@@ -24,8 +36,44 @@ builder.Services.AddControllers(options =>
 }).AddNewtonsoftJson()
 .AddXmlDataContractSerializerFormatters();
 
+builder.Services.AddQuartz(q =>
+{
+    // Use a Scoped container to create jobs. I'll touch on this later
+    q.UseMicrosoftDependencyInjectionScopedJobFactory();
+
+    var jobKey = new JobKey("DeleteEventJob");
+
+    var jobKey2 = new JobKey("DeleteLogJob");
+
+    // Register the job with the DI container
+    q.AddJob<DeleteEventJob>(opts => opts.WithIdentity(jobKey));
+
+    q.AddJob<DeleteLogJob>(opts => opts.WithIdentity(jobKey2));
+
+    // Create a trigger for the job
+    q.AddTrigger(opts => opts
+        .ForJob(jobKey) // link to the HelloWorldJob
+        .WithIdentity("DeleteEventJob-trigger") // give the trigger a unique name
+        .WithCronSchedule("0 30 22 1/1 * ? *")); // run every Sunday at 22:30 
+
+    q.AddTrigger(opts => opts
+        .ForJob(jobKey2) // link to the HelloWorldJob
+        .WithIdentity("DeleteLogJob-trigger") // give the trigger a unique name
+        .WithCronSchedule("0 30 22 1/1 * ? *")); // run every Monday at 8 Am
+
+});
+builder.Services.AddQuartzHostedService(opt =>
+{
+    opt.WaitForJobsToComplete = true;
+});
+
+ISchedulerFactory schedulerFactory = new StdSchedulerFactory();
+IScheduler scheduler = await schedulerFactory.GetScheduler();
+
 builder.Services.AddSignalR();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSingleton(scheduler);
+builder.Services.AddHostedService<CustomQuartzHostedService>();
 builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 builder.Services.AddTransient<IMailService, MailService>();
 
@@ -36,11 +84,11 @@ builder.Services.AddDbContext<VolunteeringPlatformContext>(
 
 
 builder.Services.AddScoped<IEventRepository, EventRepository>();
-
 builder.Services.AddScoped<IChatRoomService, ChatRoomService>();
 builder.Services.AddScoped<IMessageService, MessageService>();
-
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IEventPhotoRepository, EventPhotoRepository>();
+builder.Services.AddScoped<IJoinedEventRepository, JoinedEventRepository>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -55,6 +103,15 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+app.UseCors(builder =>
+{
+    builder.WithOrigins("https://localhost:44413")
+        .AllowAnyHeader()
+        .WithMethods("GET", "POST" , "DELETE")
+        .AllowCredentials();
+});
+
 app.UseRouting();
 
 
@@ -68,6 +125,9 @@ app.UseEndpoints(endpoints =>
     endpoints.MapHub<ChatHub>("/chathub");
 });
 
-app.MapFallbackToFile("index.html"); ;
+
+
+app.MapFallbackToFile("index.html");
+
 
 app.Run();

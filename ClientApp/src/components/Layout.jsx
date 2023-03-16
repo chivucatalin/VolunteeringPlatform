@@ -15,8 +15,6 @@ export const Layout = (props) => {
     const createAccount = window.location.href.split("/").pop() === 'create-account' ? 1 : 0
     React.useEffect(() => {
         console.log(cookies.token)
-        console.log('----------------------------------------------------------')
-        console.log(createAccount)
         if (cookies.token === null) {
             setAuthentificated(false)
             return
@@ -33,18 +31,21 @@ export const Layout = (props) => {
             return
         }
         setAuthentificated(true)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (<div>
-        {authentificated === true &&
+        {authentificated === true ? (
             <div>
                 <NavMenu />
-                {props.children}</div>}
-        {(authentificated === false && createAccount)&&
-            <CreateAccountPage/>}
-        {(authentificated === false && !createAccount)&&
+                {props.children}
+            </div>
+        ) : null}
+        {(authentificated === false && createAccount) ? <CreateAccountPage /> : null}
+        {(authentificated === false && !createAccount) ? (
             <div>
                 <LoginModal />
-            </div>}
+            </div>
+        ) : null}
     </div>
     )
 }

@@ -6,8 +6,8 @@ namespace Volunteering_Platform.Profiles
     {
         public ChatRoomProfile()
         {
-            CreateMap<Entities.ChatRoom, Models.ChatRoomDto>();
-            CreateMap<Models.ChatRoomForCreationDto, Entities.ChatRoom>();
+            CreateMap<VolunteeringPlatform.Entities.ChatRoom, Models.ChatRoomDto>();
+            CreateMap<Models.ChatRoomForCreationDto, VolunteeringPlatform.Entities.ChatRoom>();
 
         }
     }

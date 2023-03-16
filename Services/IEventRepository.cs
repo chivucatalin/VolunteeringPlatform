@@ -1,4 +1,4 @@
-﻿using Volunteering_Platform.Entities;
+﻿using VolunteeringPlatform.Entities;
 
 namespace VolunteeringPlatform.Services
 {
@@ -13,12 +13,16 @@ namespace VolunteeringPlatform.Services
             string? address,
             string? fromDate,
             string? toDate,
-            int pageNumber, int pageSize);
-        Task<Event?> GetEventAsync(int cityId);
+            int pageNumber, int pageSize,
+            bool onlyJoined,
+            string userName);
+        Task<Event?> GetEventAsync(int eventId);
 
         Task AddEventAsync(Event newEvent);
 
         void DeleteEvent(Event eventEntity);
+
+        void ChangeNoVolunteers(int eventId, bool type);
 
         Task<bool> SaveChangesAsync();
     }

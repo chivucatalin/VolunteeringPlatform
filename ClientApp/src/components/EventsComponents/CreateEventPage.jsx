@@ -11,6 +11,8 @@ import { CreateEventMapForm } from './CreateEventMapForm'
 import { useDispatch, useSelector } from 'react-redux'
 import { coordinatesChange, addressChange, addressGetFromField } from '../../store/map';
 import { useCookies } from 'react-cookie'
+import { useNavigate } from "react-router-dom";
+import { useSnackbar } from 'notistack';
 
 
 //Pentru ca adresa se foloseste si de harta ,o sa cream o componenta externa pt field-ul adresei ca sa ne putem ocupa de detalii
@@ -18,6 +20,7 @@ import { useCookies } from 'react-cookie'
 const CreateEventAddressForm = () => {
     //ca sa folosim state-ul global al hartii
     const dispatch = useDispatch()
+
     const { map } = useSelector(state => state.map)
 
     //atunci cand scriem ceva in field,vrem ca adresa din state sa se schimbe si sa 
@@ -25,7 +28,6 @@ const CreateEventAddressForm = () => {
         //cum fac sa nu se dea dispatch mereu cand scriu ceva si doar cand se termina?
         dispatch(addressChange(event.target.value))
         dispatch(addressGetFromField())
-        console.log('Testing-Get address from textfield')
     }
 
     //cand se schimba adresa vrem sa schimbam si locatia de pe harta,verificam mai intai daca 
@@ -56,7 +58,6 @@ const CreateEventAddressForm = () => {
                     lng: json[0].lon,
                 }
                 dispatch(coordinatesChange(coordinates));
-                console.log(json[0])
             })
             .catch((err) => console.log('Error!!!!' + err));
 
@@ -95,8 +96,8 @@ const validate = values => {
     if (!values.eventType) {
         errors.eventType = 'Required';
     }
-    if (!values.eventNoVolunteers) {
-        errors.eventNoVolunteers = 'Required';
+    if (!values.eventNoOfVolunteers) {
+        errors.eventNoOfVolunteers = 'Required';
     }
     return errors;
 };
@@ -104,6 +105,8 @@ const validate = values => {
 export const CreateEventPage = () => {
     const { map } = useSelector(state => state.map)
     const [cookies] = useCookies(['token'])
+    const navigate = useNavigate();
+    const { enqueueSnackbar } = useSnackbar()
 
     //cand dam submit la form adaugam proprietati noi la values si apoi dam fetch cu post
 
@@ -125,6 +128,28 @@ export const CreateEventPage = () => {
                 headers: res.headers,
                 json
             })))
+            .then(({json}) => {
+                if (json) {
+                    enqueueSnackbar('Event was created :D', {
+                        variant: 'success',
+                        anchorOrigin: {
+                            vertical: 'top',
+                            horizontal: 'center',
+                        },
+                        autoHideDuration: 5000,
+                    });
+                    navigate('/event-page');
+                } else {
+                    enqueueSnackbar('Something was wrong ,please try again!', {
+                        variant: 'error',
+                        anchorOrigin: {
+                            vertical: 'top',
+                            horizontal: 'center',
+                        },
+                        autoHideDuration: 3000,
+                    });
+                }
+            })
             .catch((err) => console.log('Error!!!!' + err));
     };
 
@@ -138,10 +163,7 @@ export const CreateEventPage = () => {
                 Event Create Form
             </Typography>
             <Typography variant="h5" align="center" component="h2" gutterBottom>
-                Create a volunteering event by the association Cantus Mundi
-            </Typography>
-            <Typography paragraph>
-                The event will not appear on the website unless it is verified by an admin.
+                Create a volunteering event 
             </Typography>
             <Form
                 onSubmit={onSubmit}
@@ -223,7 +245,7 @@ export const CreateEventPage = () => {
                                         label="Event Number of Volunteers"
                                         type="number"
                                         inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-                                        name="eventNoVolunteers"
+                                        name="eventNoOfVolunteers"
                                         margin="none"
                                     //required={true}
                                     />
@@ -259,11 +281,9 @@ export const CreateEventPage = () => {
                                     </Button>
                                 </Grid>
                             </Grid>
-                        </Paper>
-                        <pre>{JSON.stringify(values, 0, 2)}</pre>
+                        </Paper>       
                     </form>
                 )} />
-            <div> Longitude si latitude din addres , event association id de la cel care face contul</div>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Volunteering_Platform.Entities;
+using VolunteeringPlatform.Entities;
 
 using VolunteeringPlatform.Services;
 

@@ -47,7 +47,7 @@ namespace VolunteeringPlatform.Controllers
               .Select(s => s[random.Next(s.Length)]).ToArray());
 
             _mailService.Send("Account Create Verification Code",
-                "Please write this code in order to verify your e-mail : "+code, "chivu.catalin@yahoo.com");
+                "Please write this code in order to verify your e-mail : "+code, email);
 
             Response.Headers.Add("Verification-Code",
                code);
@@ -67,7 +67,7 @@ namespace VolunteeringPlatform.Controllers
                 return Conflict();
             }
             newUser.Password = _repository.HashPassword(newUser.Username, newUser.Password);
-            var userEntity = _mapper.Map<Volunteering_Platform.Entities.User>(newUser);
+            var userEntity = _mapper.Map<VolunteeringPlatform.Entities.User>(newUser);
             await _repository.AddUserAsync(userEntity);
             await _repository.SaveChangesAsync();
             var createdUserToReturn =

@@ -1,0 +1,189 @@
+2023-03-03 11:55:43.471 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-03 11:56:56.659 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-03 11:56:57.283 +02:00 [DBG] The index {'UserId'} was not created on entity type 'JoinedEvent' as the properties are already covered by the index {'UserId', 'EventId'}.
+2023-03-03 11:56:57.659 +02:00 [DBG] Entity Framework Core 7.0.0 initialized 'VolunteeringPlatformContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.0' with options: None
+2023-03-03 11:56:57.695 +02:00 [DBG] The index {'UserId'} was not created on entity type 'JoinedEvent' as the properties are already covered by the index {'UserId', 'EventId'}.
+2023-03-03 11:56:58.009 +02:00 [DBG] 'VolunteeringPlatformContext' disposed.
+2023-03-03 11:57:06.668 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-03-03 11:57:07.348 +02:00 [DBG] The index {'UserId'} was not created on entity type 'JoinedEvent' as the properties are already covered by the index {'UserId', 'EventId'}.
+2023-03-03 11:57:07.742 +02:00 [DBG] Entity Framework Core 7.0.0 initialized 'VolunteeringPlatformContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.0' with options: None
+2023-03-03 11:57:07.764 +02:00 [DBG] Creating DbConnection.
+2023-03-03 11:57:07.793 +02:00 [DBG] Created DbConnection. (25ms).
+2023-03-03 11:57:07.801 +02:00 [DBG] Migrating using database 'main' on server 'CityInfo.db'.
+2023-03-03 11:57:07.808 +02:00 [DBG] Creating DbConnection.
+2023-03-03 11:57:07.809 +02:00 [DBG] Created DbConnection. (1ms).
+2023-03-03 11:57:07.812 +02:00 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-03-03 11:57:07.842 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-03-03 11:57:07.852 +02:00 [DBG] Disposing connection to database 'main' on server 'CityInfo.db'.
+2023-03-03 11:57:07.857 +02:00 [DBG] Disposed connection to database 'main' on server 'CityInfo.db' (0ms).
+2023-03-03 11:57:07.878 +02:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-03-03 11:57:07.887 +02:00 [DBG] Created DbCommand for 'ExecuteScalar' (11ms).
+2023-03-03 11:57:07.888 +02:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (18ms).
+2023-03-03 11:57:07.889 +02:00 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-03-03 11:57:07.893 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-03-03 11:57:07.904 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-03-03 11:57:07.947 +02:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-03-03 11:57:07.951 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-03-03 11:57:07.957 +02:00 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (5ms).
+2023-03-03 11:57:07.959 +02:00 [DBG] Creating DbConnection.
+2023-03-03 11:57:07.959 +02:00 [DBG] Created DbConnection. (0ms).
+2023-03-03 11:57:07.959 +02:00 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-03-03 11:57:07.964 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-03-03 11:57:07.965 +02:00 [DBG] Disposing connection to database 'main' on server 'CityInfo.db'.
+2023-03-03 11:57:07.965 +02:00 [DBG] Disposed connection to database 'main' on server 'CityInfo.db' (0ms).
+2023-03-03 11:57:07.965 +02:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-03-03 11:57:07.965 +02:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-03-03 11:57:07.966 +02:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-03-03 11:57:07.966 +02:00 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-03-03 11:57:07.966 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-03-03 11:57:07.966 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-03-03 11:57:07.967 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-03-03 11:57:07.967 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-03-03 11:57:07.967 +02:00 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (0ms).
+2023-03-03 11:57:07.991 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-03-03 11:57:07.991 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-03-03 11:57:07.991 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-03-03 11:57:07.992 +02:00 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-03-03 11:57:07.992 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-03-03 11:57:07.992 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-03-03 11:57:07.994 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-03-03 11:57:08.000 +02:00 [DBG] Closing data reader to 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-03-03 11:57:08.002 +02:00 [DBG] A data reader for 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db' is being disposed after spending 5ms reading results.
+2023-03-03 11:57:08.002 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-03-03 11:57:08.002 +02:00 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (0ms).
+2023-03-03 11:57:08.014 +02:00 [INF] Applying migration '20230303095657_AddedMany2ManyEventsUsers'.
+2023-03-03 11:57:08.094 +02:00 [DBG] Opening connection to database 'main' on server 'CityInfo.db'.
+2023-03-03 11:57:08.094 +02:00 [DBG] Opened connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-03-03 11:57:08.096 +02:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-03-03 11:57:08.099 +02:00 [DBG] Began transaction with isolation level 'Serializable'.
+2023-03-03 11:57:08.100 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-03 11:57:08.100 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:08.100 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:08.100 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "JoinedEvent" (
+    "UserId" INTEGER NOT NULL,
+    "EventId" INTEGER NOT NULL,
+    CONSTRAINT "PK_JoinedEvent" PRIMARY KEY ("UserId", "EventId"),
+    CONSTRAINT "FK_JoinedEvent_Events_EventId" FOREIGN KEY ("EventId") REFERENCES "Events" ("EventId") ON DELETE CASCADE,
+    CONSTRAINT "FK_JoinedEvent_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2023-03-03 11:57:08.527 +02:00 [INF] Executed DbCommand (426ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "JoinedEvent" (
+    "UserId" INTEGER NOT NULL,
+    "EventId" INTEGER NOT NULL,
+    CONSTRAINT "PK_JoinedEvent" PRIMARY KEY ("UserId", "EventId"),
+    CONSTRAINT "FK_JoinedEvent_Events_EventId" FOREIGN KEY ("EventId") REFERENCES "Events" ("EventId") ON DELETE CASCADE,
+    CONSTRAINT "FK_JoinedEvent_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2023-03-03 11:57:08.527 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-03 11:57:08.527 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:08.527 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:08.528 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_JoinedEvent_EventId" ON "JoinedEvent" ("EventId");
+2023-03-03 11:57:08.528 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_JoinedEvent_EventId" ON "JoinedEvent" ("EventId");
+2023-03-03 11:57:08.528 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-03 11:57:08.528 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:08.528 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:08.528 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_Events" (
+    "EventId" INTEGER NOT NULL CONSTRAINT "PK_Events" PRIMARY KEY AUTOINCREMENT,
+    "EventAddress" TEXT NOT NULL,
+    "EventCity" TEXT NOT NULL,
+    "EventDate" TEXT NULL,
+    "EventDescription" TEXT NULL,
+    "EventLatitude" REAL NULL,
+    "EventLongitude" REAL NULL,
+    "EventName" TEXT NOT NULL,
+    "EventNoOfVolunteers" INTEGER NOT NULL,
+    "EventType" INTEGER NOT NULL
+);
+2023-03-03 11:57:08.529 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_Events" (
+    "EventId" INTEGER NOT NULL CONSTRAINT "PK_Events" PRIMARY KEY AUTOINCREMENT,
+    "EventAddress" TEXT NOT NULL,
+    "EventCity" TEXT NOT NULL,
+    "EventDate" TEXT NULL,
+    "EventDescription" TEXT NULL,
+    "EventLatitude" REAL NULL,
+    "EventLongitude" REAL NULL,
+    "EventName" TEXT NOT NULL,
+    "EventNoOfVolunteers" INTEGER NOT NULL,
+    "EventType" INTEGER NOT NULL
+);
+2023-03-03 11:57:08.529 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-03 11:57:08.529 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:08.529 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:08.529 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_Events" ("EventId", "EventAddress", "EventCity", "EventDate", "EventDescription", "EventLatitude", "EventLongitude", "EventName", "EventNoOfVolunteers", "EventType")
+SELECT "EventId", "EventAddress", "EventCity", "EventDate", "EventDescription", "EventLatitude", "EventLongitude", "EventName", "EventNoOfVolunteers", "EventType"
+FROM "Events";
+2023-03-03 11:57:08.529 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_Events" ("EventId", "EventAddress", "EventCity", "EventDate", "EventDescription", "EventLatitude", "EventLongitude", "EventName", "EventNoOfVolunteers", "EventType")
+SELECT "EventId", "EventAddress", "EventCity", "EventDate", "EventDescription", "EventLatitude", "EventLongitude", "EventName", "EventNoOfVolunteers", "EventType"
+FROM "Events";
+2023-03-03 11:57:08.531 +02:00 [DBG] Committing transaction.
+2023-03-03 11:57:08.535 +02:00 [DBG] Committed transaction.
+2023-03-03 11:57:08.536 +02:00 [DBG] Disposing transaction.
+2023-03-03 11:57:08.536 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-03 11:57:08.536 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:08.537 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:08.537 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2023-03-03 11:57:08.537 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2023-03-03 11:57:08.537 +02:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-03-03 11:57:10.716 +02:00 [DBG] Began transaction with isolation level 'Serializable'.
+2023-03-03 11:57:10.716 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-03 11:57:10.716 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:10.716 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:10.716 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "Events";
+2023-03-03 11:57:10.717 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "Events";
+2023-03-03 11:57:10.717 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-03 11:57:10.717 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:10.717 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:10.717 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_Events" RENAME TO "Events";
+2023-03-03 11:57:10.719 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_Events" RENAME TO "Events";
+2023-03-03 11:57:10.719 +02:00 [DBG] Committing transaction.
+2023-03-03 11:57:10.722 +02:00 [DBG] Committed transaction.
+2023-03-03 11:57:10.723 +02:00 [DBG] Disposing transaction.
+2023-03-03 11:57:10.723 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-03 11:57:10.723 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:10.723 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:10.723 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2023-03-03 11:57:10.723 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2023-03-03 11:57:10.723 +02:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-03-03 11:57:10.723 +02:00 [DBG] Began transaction with isolation level 'Serializable'.
+2023-03-03 11:57:10.723 +02:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-03-03 11:57:10.723 +02:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:10.723 +02:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-03-03 11:57:10.723 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230303095657_AddedMany2ManyEventsUsers', '7.0.0');
+2023-03-03 11:57:10.724 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230303095657_AddedMany2ManyEventsUsers', '7.0.0');
+2023-03-03 11:57:10.724 +02:00 [DBG] Committing transaction.
+2023-03-03 11:57:10.725 +02:00 [DBG] Committed transaction.
+2023-03-03 11:57:10.725 +02:00 [DBG] Disposing transaction.
+2023-03-03 11:57:10.725 +02:00 [DBG] Closing connection to database 'main' on server 'C:\Users\Catalin\source\repos\VolunteeringPlatform\CityInfo.db'.
+2023-03-03 11:57:10.725 +02:00 [DBG] Closed connection to database 'main' on server 'CityInfo.db' (0ms).
+2023-03-03 11:57:10.727 +02:00 [DBG] 'VolunteeringPlatformContext' disposed.
+2023-03-03 11:57:10.728 +02:00 [DBG] Disposing connection to database 'main' on server 'CityInfo.db'.
+2023-03-03 11:57:10.728 +02:00 [DBG] Disposed connection to database 'main' on server 'CityInfo.db' (0ms).

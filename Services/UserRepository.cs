@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using Volunteering_Platform.Entities;
+using VolunteeringPlatform.Entities;
 using VolunteeringPlatform.DbContexts;
 
 namespace Volunteering_Platform.Services

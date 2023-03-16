@@ -1,8 +1,8 @@
-import { TextField } from "@mui/material";
 import { EventInformationPage } from "./components/EventsComponents/EventInformationPage";
 import { EventsPage } from './components/EventsPage';
 import {CreateEventPage} from './components/EventsComponents/CreateEventPage'
 import { HomePage } from "./components/HomePage";
+import { MessagesPage } from "./components/MessagesPage";
 
 //tinem toate rutele aplicatiei aici
 const AppRoutes = [
@@ -23,12 +23,8 @@ const AppRoutes = [
     element: <CreateEventPage />
   },
   {
-    path: '/counter',
-    element:<TextField/>
-  },
-  {
-    path: '/fetch-data',
-    element: <TextField/>
+    path: '/chatroom',
+    element: <MessagesPage/>
   }
 ];
 

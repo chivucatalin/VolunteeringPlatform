@@ -35,7 +35,7 @@ export const CreateEventMapForm = () => {
             aria-describedby="modal-modal-description"
         >
             <Box sx={modalStyle}>
-                <EventMap type="details"/>
+                <EventMap type="create"/>
             </Box>
             
         </Modal>

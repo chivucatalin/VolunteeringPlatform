@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 
 //Clasa eveniment pe care o vom folosi pentru a lua diferite date din baza de date
-namespace Volunteering_Platform.Entities
+namespace VolunteeringPlatform.Entities
 {
     public enum EventTypes
     {
@@ -35,13 +35,16 @@ namespace Volunteering_Platform.Entities
         [MaxLength(200)]
         public string EventAddress { get; set; } = string.Empty;
 
-        public DateTime EventDate { get; set; }
+        public DateTime? EventDate { get; set; }
 
         public int EventNoOfVolunteers { get; set; }
 
         public double? EventLongitude { get; set; }
 
         public double? EventLatitude { get; set; }
+        public ICollection<JoinedEvent>? JoinedEvents { get; set; }
+
+        public ICollection<EventPhoto>? EventPhotos { get; set; }
 
     }
 }

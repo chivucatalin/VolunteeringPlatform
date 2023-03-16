@@ -1,7 +1,8 @@
 ﻿using VolunteeringPlatform.DbContexts;
-using Volunteering_Platform.Entities;
+using VolunteeringPlatform.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
+using System.Runtime.CompilerServices;
 
 namespace VolunteeringPlatform.Services
 {
@@ -25,7 +26,9 @@ namespace VolunteeringPlatform.Services
             string? address,
             string? fromDate,
             string? toDate,
-            int pageNumber, int pageSize)
+            int pageNumber, int pageSize,
+            bool onlyJoined,
+            string userName)
         {
             // collection to start from
             var collection = _context.Events as IQueryable<Event>;
@@ -68,6 +71,16 @@ namespace VolunteeringPlatform.Services
                 collection = collection.Where(a => a.EventDate <= _toDate);
             }
 
+            if (onlyJoined)
+            {
+                var joinedEvents = _context.JoinedEvents as IQueryable<JoinedEvent>;
+                joinedEvents = joinedEvents.Where(a => a.Username.Equals(userName));
+
+                collection = from obj in collection
+                             join evt in joinedEvents on obj.EventId equals evt.EventId
+                             select obj;
+            }
+
             var totalItemCount = await collection.CountAsync();
 
             var paginationMetadata = new PaginationMetadata(
@@ -89,6 +102,19 @@ namespace VolunteeringPlatform.Services
         public async Task AddEventAsync(Event newEvent)
         {
             await _context.Events.AddAsync(newEvent);
+        }
+
+        public async void ChangeNoVolunteers(int eventId,bool type) // 1- adauga 0 -sterge
+        {
+
+            var eventEntity=await _context.Events.Where(c => c.EventId == eventId).FirstOrDefaultAsync();
+            if( eventEntity != null)
+            {
+               eventEntity.EventNoOfVolunteers+= type ? 1 : -1;
+
+                await SaveChangesAsync();
+            }
+
         }
 
         public async Task<bool> SaveChangesAsync()

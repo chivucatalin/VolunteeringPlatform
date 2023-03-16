@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.SignalR.Messaging;
 using Microsoft.EntityFrameworkCore;
-using Volunteering_Platform.Entities;
+using VolunteeringPlatform.Entities;
 using VolunteeringPlatform.DbContexts;
 
 namespace VolunteeringPlatform.Services
@@ -9,7 +9,7 @@ namespace VolunteeringPlatform.Services
     {
         private readonly VolunteeringPlatformContext _context;
 
-        public ChatRoomService(VolunteeringPlatformContext context) 
+        public ChatRoomService(VolunteeringPlatformContext context)
         {
             _context = context;
         }
@@ -17,6 +17,13 @@ namespace VolunteeringPlatform.Services
         public async Task<List<ChatRoom>> GetChatRoomsAsync()
         {
             var chatRooms = await _context.ChatRooms.ToListAsync<ChatRoom>();
+
+            return chatRooms;
+        }
+
+        public async Task<List<ChatRoom>> GetChatRoomsAsync(string username)
+        {
+            var chatRooms = await _context.ChatRooms.Where(a => (a.Name == username || a.UserName == username)).ToListAsync<ChatRoom>();
 
             return chatRooms;
         }
@@ -36,6 +43,20 @@ namespace VolunteeringPlatform.Services
             var saveResults = await _context.SaveChangesAsync();
 
             return saveResults > 0;
+        }
+
+        public async Task<bool> ChatRoomExist(string Name, string UserName)
+        {
+
+            if (await _context.ChatRooms.Where(a => (a.Name == Name && a.UserName == UserName)).FirstOrDefaultAsync() != default)
+                return true;
+
+            if (await _context.ChatRooms.Where(a => (a.Name == UserName && a.UserName == Name)).FirstOrDefaultAsync() != default)
+                return true;
+
+            return false;
+
+
         }
 
         public async Task<bool> SaveChangesAsync()

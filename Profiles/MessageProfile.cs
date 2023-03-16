@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace Volunteering_Platform.Profiles
+namespace VolunteeringPlatform.Profiles
 {
     public class MessageProfile:Profile
     {
