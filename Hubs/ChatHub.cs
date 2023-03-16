@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.SignalR;                                         
-using Volunteering_Platform.Entities;
+using VolunteeringPlatform.Entities;
 using Volunteering_Platform.Models;
 using Volunteering_Platform.Services;
 using VolunteeringPlatform.Services;

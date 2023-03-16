@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Volunteering_Platform.Entities
+namespace VolunteeringPlatform.Entities
 {
     public class User
     {

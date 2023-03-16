@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 
 //Clasa eveniment pe care o vom folosi pentru a lua diferite date din baza de date
-namespace Volunteering_Platform.Entities
+namespace VolunteeringPlatform.Entities
 {
     public enum EventTypes
     {

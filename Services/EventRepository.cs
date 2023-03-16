@@ -1,5 +1,5 @@
 ﻿using VolunteeringPlatform.DbContexts;
-using Volunteering_Platform.Entities;
+using VolunteeringPlatform.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 

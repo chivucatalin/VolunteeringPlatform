@@ -63,7 +63,7 @@ namespace VolunteeringPlatform.Controllers
         [HttpPost]
         public async Task<ActionResult<MessageDto>> Post([FromBody] MessageForCreationDto message)
         {
-            var messageEntity = _mapper.Map<Volunteering_Platform.Entities.Message>(message);
+            var messageEntity = _mapper.Map<VolunteeringPlatform.Entities.Message>(message);
             await _messageService.AddMessageToRoomAsync(message.RoomId, messageEntity);
             await _messageService.SaveChangesAsync();
 

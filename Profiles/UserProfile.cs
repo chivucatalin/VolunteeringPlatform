@@ -6,9 +6,9 @@ namespace Volunteering_Platform.Profiles
     {
 
         public UserProfile() { 
-        CreateMap<Entities.User, VolunteeringPlatform.Models.UserDto>();
+        CreateMap<VolunteeringPlatform.Entities.User, VolunteeringPlatform.Models.UserDto>();
 
-        CreateMap<VolunteeringPlatform.Models.UserForCreationDto, Entities.User>();
+        CreateMap<VolunteeringPlatform.Models.UserForCreationDto, VolunteeringPlatform.Entities.User>();
         }
     }
 }

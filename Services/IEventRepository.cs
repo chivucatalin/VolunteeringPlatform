@@ -1,4 +1,4 @@
-﻿using Volunteering_Platform.Entities;
+﻿using VolunteeringPlatform.Entities;
 
 namespace VolunteeringPlatform.Services
 {

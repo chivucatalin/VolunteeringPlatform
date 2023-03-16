@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Volunteering_Platform.Entities;
+using VolunteeringPlatform.Entities;
 using VolunteeringPlatform.Models;
 using VolunteeringPlatform.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -142,7 +142,7 @@ namespace VolunteeringPlatform.Controllers
                 return Forbid();
             }
 
-            var eventEntity = _mapper.Map<Volunteering_Platform.Entities.Event>(newEvent);
+            var eventEntity = _mapper.Map<VolunteeringPlatform.Entities.Event>(newEvent);
             await _repository.AddEventAsync(eventEntity);
             await _repository.SaveChangesAsync();
             var createdEventToReturn =

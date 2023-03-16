@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Volunteering_Platform.Entities;
+using VolunteeringPlatform.Entities;
 
 namespace VolunteeringPlatform.Services
 {

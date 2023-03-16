@@ -1,4 +1,4 @@
-﻿using Volunteering_Platform.Entities;
+﻿using VolunteeringPlatform.Entities;
 using Microsoft.EntityFrameworkCore;
 
 //Ce dorim sa aiba baza de data pe care o cream,DbSet<=>Tabel

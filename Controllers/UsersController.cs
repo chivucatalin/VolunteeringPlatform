@@ -67,7 +67,7 @@ namespace VolunteeringPlatform.Controllers
                 return Conflict();
             }
             newUser.Password = _repository.HashPassword(newUser.Username, newUser.Password);
-            var userEntity = _mapper.Map<Volunteering_Platform.Entities.User>(newUser);
+            var userEntity = _mapper.Map<VolunteeringPlatform.Entities.User>(newUser);
             await _repository.AddUserAsync(userEntity);
             await _repository.SaveChangesAsync();
             var createdUserToReturn =

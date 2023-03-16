@@ -7,8 +7,8 @@ namespace VolunteeringPlatform.Profiles
     {
         public EventProfile()
         {
-            CreateMap<Volunteering_Platform.Entities.Event, Models.EventDto>();
-            CreateMap<Models.EventForCreationDto, Volunteering_Platform.Entities.Event>();
+            CreateMap<VolunteeringPlatform.Entities.Event, Models.EventDto>();
+            CreateMap<Models.EventForCreationDto, VolunteeringPlatform.Entities.Event>();
         }
     }
 }

@@ -14,7 +14,7 @@ using AutoMapper;
 namespace VolunteeringPlatform.Controllers
 {
     [EnableCors("CorsPolicy")]
-    [Route("[controller]")]
+    [Route("{controller}")]
     public class ChatRoomController : Controller
     {
         private readonly IChatRoomService _chatRoomService;
@@ -35,7 +35,7 @@ namespace VolunteeringPlatform.Controllers
             return Ok(chatRooms);
         }
 
-        [HttpGet("{roomId",Name ="GetRoom")]
+        [HttpGet("{roomId}",Name ="GetRoom")]
         public async Task<IActionResult> Get(Guid roomId)
         {
             var chatRoom = await _chatRoomService.GetChatRoomAsync(roomId);
@@ -49,7 +49,7 @@ namespace VolunteeringPlatform.Controllers
         [HttpPost]
         public async Task<ActionResult<ChatRoomDto>>  Post([FromBody]ChatRoomForCreationDto chatRoom)
         {
-            var chatRoomEntity = _mapper.Map<Volunteering_Platform.Entities.ChatRoom>(chatRoom);
+            var chatRoomEntity = _mapper.Map<VolunteeringPlatform.Entities.ChatRoom>(chatRoom);
             await _chatRoomService.AddChatRoomAsync(chatRoomEntity);
             await _chatRoomService.SaveChangesAsync();
 
